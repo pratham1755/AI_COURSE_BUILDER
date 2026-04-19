@@ -1,0 +1,20 @@
+{
+  "name": "ai-course-builder-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=frontend",
+    "postinstall": "npm run build --workspace=frontend",
+    "start": "npm start --workspace=backend"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001788"
+  }
+}
